@@ -31,8 +31,6 @@ jobs:
 
       - name: 👨🏻‍💻 Install dependencies
         run: yarn install --immutable
-        env:
-          YARN_NODE_LINKER: node-modules
 
       - name: 👀 Lint Commit Messages [PR]
         if: github.event_name == 'pull_request'

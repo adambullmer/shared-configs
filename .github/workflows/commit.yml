@@ -38,4 +38,4 @@ jobs:
 
       - name: 👀 Lint Commit Messages [Push]
         if: github.event_name == 'push'
-        run: yarn run lint:commit ${{ github.event.commits[0].id }}
+        run: yarn run lint:commit ${{ github.event.commits[0].id }}~1

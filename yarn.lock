@@ -5,8 +5,19 @@ __metadata:
   version: 8
   cacheKey: 10c0
 
+"husky@npm:^9.1.6":
+  version: 9.1.6
+  resolution: "husky@npm:9.1.6"
+  bin:
+    husky: bin.js
+  checksum: 10c0/705673db4a247c1febd9c5df5f6a3519106cf0335845027bb50a15fba9b1f542cb2610932ede96fd08008f6d9f49db0f15560509861808b0031cdc0e7c798bac
+  languageName: node
+  linkType: hard
+
 "shared-configs@workspace:.":
   version: 0.0.0-use.local
   resolution: "shared-configs@workspace:."
+  dependencies:
+    husky: "npm:^9.1.6"
   languageName: unknown
   linkType: soft

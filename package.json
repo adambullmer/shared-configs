@@ -5,5 +5,8 @@
   "license": "LGPL-3.0-only",
   "scripts": {
     "prepare": "husky"
+  },
+  "devDependencies": {
+    "husky": "^9.1.6"
   }
 }

@@ -4,9 +4,15 @@
   "packageManager": "yarn@4.5.0",
   "license": "LGPL-3.0-only",
   "scripts": {
+    "lint:commit": "commitlint",
     "prepare": "husky"
   },
   "devDependencies": {
+    "@commitlint/cli": "^19.5.0",
+    "@commitlint/config-conventional": "^19.5.0",
+    "@commitlint/types": "^19.5.0",
+    "commitlint-config-semantic-commit-emoji": "^3.0.0",
+    "commitlint-plugin-semantic-commit-emoji": "^3.0.0",
     "husky": "^9.1.6",
     "semantic-commit-emoji": "^1.0.4"
   }

@@ -1,1 +1,2 @@
+yarn run lint:commit --edit $1
 yarn run semantic-commit-emoji $1

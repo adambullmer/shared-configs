@@ -4,7 +4,8 @@
   "packageManager": "yarn@4.5.0",
   "license": "LGPL-3.0-only",
   "scripts": {
-    "lint:commit": "commitlint",
+    "lint:commit": "commitlint --from ${0:-HEAD~1} --to ${1:-HEAD} --verbose",
+    "lint:commit:runner": "commitlint",
     "prepare": "husky"
   },
   "devDependencies": {

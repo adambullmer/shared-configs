@@ -1,0 +1,43 @@
+name: Lint Commit Messages
+
+on:
+  push: {}
+  pull_request: {}
+
+permissions:
+  contents: read # for checkout
+  pull-requests: read
+
+jobs:
+  commitlint:
+    name: Commit Lint
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 🛎 Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: 🏗 Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+
+      - name: 🛠 Configure Corepack
+        run: |
+          corepack enable
+          corepack install
+
+      - name: 👨🏻‍💻 Install dependencies
+        run: yarn install --immutable
+        env:
+          YARN_NODE_LINKER: node-modules
+
+      - name: 👀 Lint Commit Messages [PR]
+        if: github.event_name == 'pull_request'
+        run: yarn run lint:commit ${{ github.event.pull_request.base.sha }}
+
+      - name: 👀 Lint Commit Messages [Push]
+        if: github.event_name == 'push'
+        run: yarn run lint:commit ${{ github.event.commits[0].id }}

@@ -5,7 +5,7 @@ __metadata:
   version: 8
   cacheKey: 10c0
 
-"@adambullmer/lint-staged-config@workspace:packages/lint-staged-config":
+"@adambullmer/lint-staged-config@workspace:*, @adambullmer/lint-staged-config@workspace:packages/lint-staged-config":
   version: 0.0.0-use.local
   resolution: "@adambullmer/lint-staged-config@workspace:packages/lint-staged-config"
   dependencies:
@@ -4271,6 +4271,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "shared-configs@workspace:."
   dependencies:
+    "@adambullmer/lint-staged-config": "workspace:*"
     "@commitlint/cli": "npm:^19.5.0"
     "@commitlint/config-conventional": "npm:^19.5.0"
     "@commitlint/types": "npm:^19.5.0"

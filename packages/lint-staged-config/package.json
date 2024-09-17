@@ -13,7 +13,8 @@
   "files": ["lint-staged.config.mjs"],
   "exports": "./lint-staged.config.mjs",
   "scripts": {
-    "test": "echo 'No tests'"
+    "test": "echo 'No tests'",
+    "release": "semantic-release"
   },
   "dependencies": {
     "@types/lint-staged": "^13.3.0"

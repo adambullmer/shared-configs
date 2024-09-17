@@ -6,6 +6,8 @@
   "scripts": {
     "lint:commit": "commitlint --from ${0:-HEAD~1} --to ${1:-HEAD} --verbose",
     "lint:commit:runner": "commitlint",
+    "release": "yarn run ws release",
+    "ws": "yarn workspaces foreach -vipt --exclude shared-configs",
     "prepare": "husky"
   },
   "workspaces": ["packages/*"],

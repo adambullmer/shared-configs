@@ -7,6 +7,7 @@ const preset = "conventionalcommits";
  * @type {import('semantic-release').GlobalConfig}
  */
 export default {
+  extends: ["semantic-release-monorepo"],
   branches: [
     "+([0-9])?(.{+([0-9]),x}).x",
     "main",

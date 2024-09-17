@@ -5,6 +5,16 @@ __metadata:
   version: 8
   cacheKey: 10c0
 
+"@adambullmer/lint-staged-config@workspace:packages/lint-staged-config":
+  version: 0.0.0-use.local
+  resolution: "@adambullmer/lint-staged-config@workspace:packages/lint-staged-config"
+  dependencies:
+    "@types/lint-staged": "npm:^13.3.0"
+  peerDependencies:
+    lint-staged: "*"
+  languageName: unknown
+  linkType: soft
+
 "@babel/code-frame@npm:^7.0.0, @babel/code-frame@npm:^7.21.4, @babel/code-frame@npm:^7.22.13":
   version: 7.24.7
   resolution: "@babel/code-frame@npm:7.24.7"
@@ -863,6 +873,13 @@ __metadata:
   dependencies:
     "@types/node": "npm:*"
   checksum: 10c0/16c748ce01cb3b3ea5947950acd695569c0daa8da62cc7e0eb98b15c4d7f812f95c079fe2c853325509f8aa73cfd388390319ae4621c8dfb21eeacb63accdb25
+  languageName: node
+  linkType: hard
+
+"@types/lint-staged@npm:^13.3.0":
+  version: 13.3.0
+  resolution: "@types/lint-staged@npm:13.3.0"
+  checksum: 10c0/b4da6c76bb93b546c5aa1ad98ad845ea9d10aec15df30d5e3b2567d0cc360c4be26b1af9e5ca32c956322da1be4b26dab02a1ec41b82dab2f4f75dc27b9b791b
   languageName: node
   linkType: hard
 

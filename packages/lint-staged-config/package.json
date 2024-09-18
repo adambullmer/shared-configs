@@ -1,6 +1,6 @@
 {
   "name": "@adambullmer/lint-staged-config",
-  "version": "0.0.1",
+  "version": "0.0.0-development",
   "description": "",
   "repository": "https://github.com/adambullmer/shared-configs",
   "homepage": "https://github.com/adambullmer/shared-configs/tree/main/packages/lint-staged-config/#readme",
@@ -8,7 +8,9 @@
   "packageManager": "yarn@4.5.0",
   "type": "module",
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
+    "registry": "https://npm.pkg.github.com",
+    "access": "public",
+    "provenance": true
   },
   "files": [
     "lint-staged.config.mjs"

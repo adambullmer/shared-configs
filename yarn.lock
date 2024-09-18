@@ -10,6 +10,8 @@ __metadata:
   resolution: "@adambullmer/lint-staged-config@workspace:packages/lint-staged-config"
   dependencies:
     "@types/lint-staged": "npm:^13.3.0"
+    commitlint-plugin-semantic-commit-emoji: "npm:^3.0.0"
+    semantic-release-monorepo: "npm:^8.0.2"
   peerDependencies:
     lint-staged: "*"
   languageName: unknown

@@ -19,6 +19,10 @@
   "dependencies": {
     "@types/lint-staged": "^13.3.0"
   },
+  "devDependencies": {
+    "commitlint-plugin-semantic-commit-emoji": "^3.0.0",
+    "semantic-release-monorepo": "^8.0.2"
+  },
   "peerDependencies": {
     "lint-staged": "*"
   }

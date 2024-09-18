@@ -56,6 +56,9 @@ jobs:
       - name: 👨‍💻 Install dependencies
         run: yarn install --immutable
 
+      - name: 🛡 Audit Provenance
+        run: npm audit signatures
+
       - name: 📦 Build Packages
         run: yarn run build
 
@@ -64,4 +67,4 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-          YARN_NPM_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          YARN_NPM_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

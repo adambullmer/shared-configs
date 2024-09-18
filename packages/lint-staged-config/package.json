@@ -25,6 +25,7 @@
   },
   "devDependencies": {
     "commitlint-plugin-semantic-commit-emoji": "^3.0.0",
+    "conventional-changelog-conventionalcommits": "^8.0.0",
     "semantic-release-monorepo": "^8.0.2"
   },
   "peerDependencies": {

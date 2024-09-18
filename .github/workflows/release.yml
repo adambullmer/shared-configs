@@ -45,6 +45,7 @@ jobs:
           corepack install
           yarn -v
           echo "cache-dir=$(yarn config get cacheFolder)" >> $GITHUB_OUTPUT
+          echo "//npm.pkg.github.com/:_authToken=${GITHUB_TOKEN}" > ~/.npmrc
 
       - uses: actions/cache@v4
         id: yarn-cache # use this to check for `cache-hit` (`steps.yarn-cache.outputs.cache-hit != 'true'`)
@@ -63,9 +64,14 @@ jobs:
       - name: 📦 Build Packages
         run: yarn run build
 
-      - name: 🚀 Release
+      - name: 🔖 Release
         run: yarn run release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           YARN_NPM_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: 🚀 Publish Packages
+        run: find ./packages -name "*.tgz" -exec npm publish {} \;
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

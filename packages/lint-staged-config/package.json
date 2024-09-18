@@ -10,7 +10,9 @@
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
   },
-  "files": ["lint-staged.config.mjs"],
+  "files": [
+    "lint-staged.config.mjs"
+  ],
   "exports": "./lint-staged.config.mjs",
   "scripts": {
     "test": "echo 'No tests'",

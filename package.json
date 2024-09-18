@@ -10,7 +10,9 @@
     "ws": "yarn workspaces foreach -Avpit --exclude shared-configs",
     "prepare": "husky"
   },
-  "workspaces": ["packages/*"],
+  "workspaces": [
+    "packages/*"
+  ],
   "type": "module",
   "devDependencies": {
     "@adambullmer/lint-staged-config": "workspace:*",

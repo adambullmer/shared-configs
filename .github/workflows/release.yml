@@ -37,6 +37,11 @@ jobs:
         with:
           node-version-file: .nvmrc
 
+      - name: 🛠 Configure Corepack
+        run: |
+          corepack enable
+          corepack install
+
       - name: 👨‍💻 Install dependencies
         run: yarn install --immutable
 

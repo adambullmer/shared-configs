@@ -11,6 +11,7 @@
     "prepare": "husky"
   },
   "workspaces": ["packages/*"],
+  "type": "module",
   "devDependencies": {
     "@adambullmer/lint-staged-config": "workspace:*",
     "@commitlint/cli": "^19.5.0",

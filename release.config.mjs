@@ -46,15 +46,8 @@ export default {
       {
         // Disable so that a follow up publish command can be used with npm's --provenance flag
         // This adds confidence to the ecosystem for this package's supply chain authenticity
-        npmPublish: false,
+        npmPublish: true,
         tarballDir: "artifacts/package",
-      },
-    ],
-    [
-      "@semantic-release/git",
-      {
-        assets: ["package.json"],
-        message: ":bookmark:chore: Release v${nextRelease.version} [skip ci]\n\n${nextRelease.notes}",
       },
     ],
     [

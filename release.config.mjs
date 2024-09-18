@@ -44,7 +44,7 @@ export default {
       {
         // Disable so that a follow up publish command can be used with npm's --provenance flag
         // This adds confidence to the ecosystem for this package's supply chain authenticity
-        npmPublish: true,
+        npmPublish: false,
         tarballDir: "artifacts/package",
       },
     ],

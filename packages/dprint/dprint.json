@@ -5,9 +5,18 @@
   "useTabs": false,
 
   // Plugin Config
-  "biome": {},
+  "biome": {
+    "associations": [
+      "!package.json", // yarn and biome's expectation of small arrays conflict causing lots of dirty changes often.
+      "!*.json", // probably just defer all JSON formatting to the JSON plugin
+    ],
+  },
   "dockerfile": {},
-  "json": {},
+  "json": {
+    "array.preferSingleLine": false,
+    "preferSingleLine": false,
+    "commentLine.forceSpaceAfterSlashes": true
+  },
   "malva": {},
   "markdown": {},
   "markup": {},

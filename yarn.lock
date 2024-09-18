@@ -5,6 +5,16 @@ __metadata:
   version: 8
   cacheKey: 10c0
 
+"@adambullmer/dprint-config@workspace:packages/dprint":
+  version: 0.0.0-use.local
+  resolution: "@adambullmer/dprint-config@workspace:packages/dprint"
+  dependencies:
+    commitlint-plugin-semantic-commit-emoji: "npm:^3.0.0"
+    conventional-changelog-conventionalcommits: "npm:^8.0.0"
+    semantic-release-monorepo: "npm:^8.0.2"
+  languageName: unknown
+  linkType: soft
+
 "@adambullmer/lint-staged-config@workspace:*, @adambullmer/lint-staged-config@workspace:packages/lint-staged-config":
   version: 0.0.0-use.local
   resolution: "@adambullmer/lint-staged-config@workspace:packages/lint-staged-config"

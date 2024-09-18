@@ -1,0 +1,28 @@
+{
+  "name": "@adambullmer/dprint-config",
+  "version": "0.0.0-development",
+  "description": "",
+  "repository": "https://github.com/adambullmer/shared-configs",
+  "homepage": "https://github.com/adambullmer/shared-configs/tree/main/packages/dprint-config/#readme",
+  "license": "LGPL-3.0-only",
+  "packageManager": "yarn@4.5.0",
+  "type": "module",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com",
+    "access": "public",
+    "provenance": true
+  },
+  "files": [
+    "dprint.json"
+  ],
+  "exports": "./dprint.json",
+  "scripts": {
+    "test": "echo 'No tests'",
+    "release": "semantic-release"
+  },
+  "devDependencies": {
+    "commitlint-plugin-semantic-commit-emoji": "^3.0.0",
+    "conventional-changelog-conventionalcommits": "^8.0.0",
+    "semantic-release-monorepo": "^8.0.2"
+  }
+}

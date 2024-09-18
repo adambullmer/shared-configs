@@ -3,13 +3,11 @@ import { parserPreset } from "commitlint-plugin-semantic-commit-emoji/parser";
 // Requires a first party dependency on conventional-changelog-conventionalcommits
 const preset = "conventionalcommits";
 
-const semanticReleaseMonorepoPath = import.meta.resolve("semantic-release-monorepo");
-
 /**
  * @type {import('semantic-release').GlobalConfig}
  */
 export default {
-  extends: semanticReleaseMonorepoPath,
+  extends: "semantic-release-monorepo",
   branches: [
     "+([0-9])?(.{+([0-9]),x}).x",
     "main",

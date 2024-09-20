@@ -42,7 +42,7 @@ export default {
     [
       "@semantic-release/github",
       {
-        assets: "dprint.json",
+        assets: ["dprint.json", "dprint.*.json"],
       },
     ],
   ],

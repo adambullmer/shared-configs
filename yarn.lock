@@ -5,7 +5,7 @@ __metadata:
   version: 8
   cacheKey: 10c0
 
-"@adambullmer/commitlint-config@workspace:packages/commitlint":
+"@adambullmer/commitlint-config@workspace:*, @adambullmer/commitlint-config@workspace:packages/commitlint":
   version: 0.0.0-use.local
   resolution: "@adambullmer/commitlint-config@workspace:packages/commitlint"
   dependencies:
@@ -1400,17 +1400,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"commitlint-config-semantic-commit-emoji@npm:^3.0.0":
-  version: 3.0.0
-  resolution: "commitlint-config-semantic-commit-emoji@npm:3.0.0"
-  dependencies:
-    commitlint-plugin-semantic-commit-emoji: "npm:3.0.0"
-  peerDependencies:
-    "@commitlint/cli": ^11.0.0
-  checksum: 10c0/7c1809cde9505d3792cc0660d27849fa288f709e6802bf4655a7718d8211d1e73ab496e2271b5a59434b18cccf239063a81ed07be83c36ba6e8c0d91dac67908
-  languageName: node
-  linkType: hard
-
 "commitlint-config-semantic-commit-emoji@npm:^3.0.1":
   version: 3.0.1
   resolution: "commitlint-config-semantic-commit-emoji@npm:3.0.1"
@@ -1423,15 +1412,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"commitlint-plugin-semantic-commit-emoji@npm:3.0.0, commitlint-plugin-semantic-commit-emoji@npm:^3.0.0":
-  version: 3.0.0
-  resolution: "commitlint-plugin-semantic-commit-emoji@npm:3.0.0"
-  peerDependencies:
-    "@commitlint/cli": ^11.0.0
-  checksum: 10c0/5e4ee3252019c50cd8e965e556dfd08b69b0e3b703d2bd1367748ce0507bbb1b0d2ebb26188fbaa95de9af3a4acbf36441457af3a28dd9ec849a4900268ed4c6
-  languageName: node
-  linkType: hard
-
 "commitlint-plugin-semantic-commit-emoji@npm:3.0.1, commitlint-plugin-semantic-commit-emoji@npm:^3.0.1":
   version: 3.0.1
   resolution: "commitlint-plugin-semantic-commit-emoji@npm:3.0.1"
@@ -1440,6 +1420,15 @@ __metadata:
   peerDependencies:
     "@commitlint/cli": ^11.0.0
   checksum: 10c0/f1ebd00f3c02ee8a93a903f826b98eb90a89ae77dc50ba54aaea8603af839892f719ad3332e8661619158e49937c6b1e60e753913877ff1115b9adc00e2f867f
+  languageName: node
+  linkType: hard
+
+"commitlint-plugin-semantic-commit-emoji@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "commitlint-plugin-semantic-commit-emoji@npm:3.0.0"
+  peerDependencies:
+    "@commitlint/cli": ^11.0.0
+  checksum: 10c0/5e4ee3252019c50cd8e965e556dfd08b69b0e3b703d2bd1367748ce0507bbb1b0d2ebb26188fbaa95de9af3a4acbf36441457af3a28dd9ec849a4900268ed4c6
   languageName: node
   linkType: hard
 
@@ -4697,16 +4686,13 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "shared-configs@workspace:."
   dependencies:
+    "@adambullmer/commitlint-config": "workspace:*"
     "@adambullmer/lint-staged-config": "workspace:*"
     "@commitlint/cli": "npm:^19.5.0"
-    "@commitlint/config-conventional": "npm:^19.5.0"
-    "@commitlint/types": "npm:^19.5.0"
     "@semantic-release/commit-analyzer": "npm:^13.0.0"
     "@semantic-release/git": "npm:^10.0.1"
     "@semantic-release/github": "npm:^10.3.4"
     "@semantic-release/release-notes-generator": "npm:^14.0.1"
-    commitlint-config-semantic-commit-emoji: "npm:^3.0.0"
-    commitlint-plugin-semantic-commit-emoji: "npm:^3.0.0"
     conventional-changelog-conventionalcommits: "npm:^8.0.0"
     husky: "npm:^9.1.6"
     lint-staged: "npm:^15.2.10"

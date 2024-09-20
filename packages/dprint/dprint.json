@@ -9,8 +9,8 @@
   "biome": {
     "associations": [
       "!package.json", // yarn and biome's expectation of small arrays conflict causing lots of dirty changes often.
-      "!*.json" // probably just defer all JSON formatting to the JSON plugin
-    ]
+      "!*.json", // probably just defer all JSON formatting to the JSON plugin
+    ],
     // Agree with all default formatter settings
   },
   "dockerfile": {
@@ -21,8 +21,8 @@
       "**/*.jsonc",
       "dprint.json",
       "tsconfig*.json",
-      ".vscode/*.json"
-    ]
+      ".vscode/*.json",
+    ],
   },
   // CSS, SCSS, Sass (indented syntax), and Less
   "malva": {
@@ -42,14 +42,14 @@
     "vOnStyle": "short",
     "vForDelimiterStyle": "in",
     "vSlotStyle": "short",
-    "astroAttrShorthand": true
+    "astroAttrShorthand": true,
   },
   // Python
   "ruff": {
     // Agree with all default formatter settings
   },
   "toml": {
-    "associations": ["Pipfile"]
+    "associations": ["Pipfile"],
   },
   // JS/TS
   "typescript": {
@@ -107,10 +107,10 @@
     "exportDeclaration.forceSingleLine": false,
     "importDeclaration.forceSingleLine": false,
     "exportDeclaration.forceMultiLine": "whenMultiple",
-    "importDeclaration.forceMultiLine": "whenMultiple"
+    "importDeclaration.forceMultiLine": "whenMultiple",
   },
   "yaml": {
-    "formatComments": true
+    "formatComments": true,
   },
 
   // "includes": [],
@@ -126,7 +126,7 @@
     "build",
     "coverage",
     "dist",
-    "locale"
+    "locale",
   ],
   "plugins": [
     "https://plugins.dprint.dev/biome-0.6.0.wasm",
@@ -138,6 +138,6 @@
     "https://plugins.dprint.dev/ruff-0.3.9.wasm",
     "https://plugins.dprint.dev/toml-0.6.2.wasm",
     "https://plugins.dprint.dev/typescript-0.93.0.wasm",
-    "https://plugins.dprint.dev/g-plane/pretty_yaml-v0.5.0.wasm"
-  ]
+    "https://plugins.dprint.dev/g-plane/pretty_yaml-v0.5.0.wasm",
+  ],
 }

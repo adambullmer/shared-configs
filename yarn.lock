@@ -43,7 +43,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@adambullmer/prettier-config@workspace:packages/prettier":
+"@adambullmer/prettier-config@workspace:*, @adambullmer/prettier-config@workspace:packages/prettier":
   version: 0.0.0-use.local
   resolution: "@adambullmer/prettier-config@workspace:packages/prettier"
   dependencies:
@@ -4709,6 +4709,7 @@ __metadata:
   dependencies:
     "@adambullmer/commitlint-config": "workspace:*"
     "@adambullmer/lint-staged-config": "workspace:*"
+    "@adambullmer/prettier-config": "workspace:*"
     "@commitlint/cli": "npm:^19.5.0"
     "@semantic-release/commit-analyzer": "npm:^13.0.0"
     "@semantic-release/git": "npm:^10.0.1"
@@ -4717,6 +4718,7 @@ __metadata:
     conventional-changelog-conventionalcommits: "npm:^8.0.0"
     husky: "npm:^9.1.6"
     lint-staged: "npm:^15.2.10"
+    prettier: "npm:^3.3.3"
     semantic-commit-emoji: "npm:^1.0.4"
     semantic-release: "npm:^24.1.1"
     semantic-release-monorepo: "npm:^8.0.2"

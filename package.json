@@ -18,6 +18,7 @@
   "devDependencies": {
     "@adambullmer/commitlint-config": "workspace:*",
     "@adambullmer/lint-staged-config": "workspace:*",
+    "@adambullmer/prettier-config": "workspace:*",
     "@commitlint/cli": "^19.5.0",
     "@semantic-release/commit-analyzer": "^13.0.0",
     "@semantic-release/git": "^10.0.1",
@@ -26,6 +27,7 @@
     "conventional-changelog-conventionalcommits": "^8.0.0",
     "husky": "^9.1.6",
     "lint-staged": "^15.2.10",
+    "prettier": "^3.3.3",
     "semantic-commit-emoji": "^1.0.4",
     "semantic-release": "^24.1.1",
     "semantic-release-monorepo": "^8.0.2",

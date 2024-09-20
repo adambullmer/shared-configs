@@ -5,6 +5,21 @@ __metadata:
   version: 8
   cacheKey: 10c0
 
+"@adambullmer/commitlint-config@workspace:packages/commitlint":
+  version: 0.0.0-use.local
+  resolution: "@adambullmer/commitlint-config@workspace:packages/commitlint"
+  dependencies:
+    "@commitlint/config-conventional": "npm:^19.5.0"
+    "@commitlint/types": "npm:^19.5.0"
+    commitlint-config-semantic-commit-emoji: "npm:^3.0.1"
+    commitlint-plugin-semantic-commit-emoji: "npm:^3.0.1"
+    conventional-changelog-conventionalcommits: "npm:^8.0.0"
+    semantic-release-monorepo: "npm:^8.0.2"
+  peerDependencies:
+    "@commitlint/cli": ">=19"
+  languageName: unknown
+  linkType: soft
+
 "@adambullmer/dprint-config@workspace:packages/dprint":
   version: 0.0.0-use.local
   resolution: "@adambullmer/dprint-config@workspace:packages/dprint"
@@ -1396,12 +1411,35 @@ __metadata:
   languageName: node
   linkType: hard
 
+"commitlint-config-semantic-commit-emoji@npm:^3.0.1":
+  version: 3.0.1
+  resolution: "commitlint-config-semantic-commit-emoji@npm:3.0.1"
+  dependencies:
+    "@commitlint/types": "npm:^19.5.0"
+    commitlint-plugin-semantic-commit-emoji: "npm:3.0.1"
+  peerDependencies:
+    "@commitlint/cli": ^11.0.0
+  checksum: 10c0/accd8bfba4cb2dd32341e438d1d38e5f35a359c27c11c510756e507a41b6f129fa88e6416d643f488785f08dc5a82136fbe6666f4f688ec9a4a9a602137d2112
+  languageName: node
+  linkType: hard
+
 "commitlint-plugin-semantic-commit-emoji@npm:3.0.0, commitlint-plugin-semantic-commit-emoji@npm:^3.0.0":
   version: 3.0.0
   resolution: "commitlint-plugin-semantic-commit-emoji@npm:3.0.0"
   peerDependencies:
     "@commitlint/cli": ^11.0.0
   checksum: 10c0/5e4ee3252019c50cd8e965e556dfd08b69b0e3b703d2bd1367748ce0507bbb1b0d2ebb26188fbaa95de9af3a4acbf36441457af3a28dd9ec849a4900268ed4c6
+  languageName: node
+  linkType: hard
+
+"commitlint-plugin-semantic-commit-emoji@npm:3.0.1, commitlint-plugin-semantic-commit-emoji@npm:^3.0.1":
+  version: 3.0.1
+  resolution: "commitlint-plugin-semantic-commit-emoji@npm:3.0.1"
+  dependencies:
+    "@commitlint/types": "npm:^19.5.0"
+  peerDependencies:
+    "@commitlint/cli": ^11.0.0
+  checksum: 10c0/f1ebd00f3c02ee8a93a903f826b98eb90a89ae77dc50ba54aaea8603af839892f719ad3332e8661619158e49937c6b1e60e753913877ff1115b9adc00e2f867f
   languageName: node
   linkType: hard
 

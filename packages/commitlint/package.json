@@ -1,0 +1,36 @@
+{
+  "name": "@adambullmer/commitlint-config",
+  "version": "0.0.0-development",
+  "description": "",
+  "repository": "https://github.com/adambullmer/shared-configs",
+  "homepage": "https://github.com/adambullmer/shared-configs/tree/main/packages/commitlint-config/#readme",
+  "license": "LGPL-3.0-only",
+  "packageManager": "yarn@4.5.0",
+  "type": "module",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com",
+    "access": "public",
+    "provenance": true
+  },
+  "files": [
+    "commitlint.config.mjs"
+  ],
+  "exports": "./commitlint.config.mjs",
+  "scripts": {
+    "test": "echo 'No tests'",
+    "release": "semantic-release"
+  },
+  "devDependencies": {
+    "conventional-changelog-conventionalcommits": "^8.0.0",
+    "semantic-release-monorepo": "^8.0.2"
+  },
+  "dependencies": {
+    "@commitlint/config-conventional": "^19.5.0",
+    "@commitlint/types": "^19.5.0",
+    "commitlint-config-semantic-commit-emoji": "^3.0.1",
+    "commitlint-plugin-semantic-commit-emoji": "^3.0.1"
+  },
+  "peerDependencies": {
+    "@commitlint/cli": ">=19"
+  }
+}

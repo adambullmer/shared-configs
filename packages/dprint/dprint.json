@@ -20,7 +20,6 @@
     "jsonTrailingCommaFiles": [
       "**/*.jsonc",
       "dprint.json",
-      "tsconfig*.json",
       ".vscode/*.json",
     ],
   },

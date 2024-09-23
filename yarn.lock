@@ -5,7 +5,7 @@ __metadata:
   version: 8
   cacheKey: 10c0
 
-@adambullmer/biome-config@workspace:packages/biome":
+"@adambullmer/biome-config@workspace:*, @adambullmer/biome-config@workspace:packages/biome":
   version: 0.0.0-use.local
   resolution: "@adambullmer/biome-config@workspace:packages/biome"
   dependencies:
@@ -4810,9 +4810,11 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "shared-configs@workspace:."
   dependencies:
+    "@adambullmer/biome-config": "workspace:*"
     "@adambullmer/commitlint-config": "workspace:*"
     "@adambullmer/lint-staged-config": "workspace:*"
     "@adambullmer/prettier-config": "workspace:*"
+    "@biomejs/biome": "npm:1.9.2"
     "@commitlint/cli": "npm:^19.5.0"
     "@semantic-release/commit-analyzer": "npm:^13.0.0"
     "@semantic-release/git": "npm:^10.0.1"

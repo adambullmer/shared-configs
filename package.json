@@ -5,6 +5,10 @@
   "license": "LGPL-3.0-only",
   "scripts": {
     "build": "yarn run ws run build",
+    "check": "biome ci",
+    "format": "biome format --write",
+    "format:source": "biome format --write",
+    "lint:source": "biome lint --write",
     "lint:commit": "commitlint --from ${0:-HEAD~1} --to ${1:-HEAD} --verbose",
     "lint:commit:runner": "commitlint",
     "release": "yarn run ws run release",
@@ -16,9 +20,11 @@
   ],
   "type": "module",
   "devDependencies": {
+    "@adambullmer/biome-config": "workspace:*",
     "@adambullmer/commitlint-config": "workspace:*",
     "@adambullmer/lint-staged-config": "workspace:*",
     "@adambullmer/prettier-config": "workspace:*",
+    "@biomejs/biome": "1.9.2",
     "@commitlint/cli": "^19.5.0",
     "@semantic-release/commit-analyzer": "^13.0.0",
     "@semantic-release/git": "^10.0.1",

@@ -5,6 +5,18 @@ __metadata:
   version: 8
   cacheKey: 10c0
 
+@adambullmer/biome-config@workspace:packages/biome":
+  version: 0.0.0-use.local
+  resolution: "@adambullmer/biome-config@workspace:packages/biome"
+  dependencies:
+    "@biomejs/biome": "npm:1.9.2"
+    conventional-changelog-conventionalcommits: "npm:^8.0.0"
+    semantic-release-monorepo: "npm:^8.0.2"
+  peerDependencies:
+    "@biomejs/biome": ">=1.9.2"
+  languageName: unknown
+  linkType: soft
+
 "@adambullmer/commitlint-config@workspace:*, @adambullmer/commitlint-config@workspace:packages/commitlint":
   version: 0.0.0-use.local
   resolution: "@adambullmer/commitlint-config@workspace:packages/commitlint"
@@ -81,6 +93,97 @@ __metadata:
     js-tokens: "npm:^4.0.0"
     picocolors: "npm:^1.0.0"
   checksum: 10c0/674334c571d2bb9d1c89bdd87566383f59231e16bcdcf5bb7835babdf03c9ae585ca0887a7b25bdf78f303984af028df52831c7989fecebb5101cc132da9393a
+  languageName: node
+  linkType: hard
+
+"@biomejs/biome@npm:1.9.2":
+  version: 1.9.2
+  resolution: "@biomejs/biome@npm:1.9.2"
+  dependencies:
+    "@biomejs/cli-darwin-arm64": "npm:1.9.2"
+    "@biomejs/cli-darwin-x64": "npm:1.9.2"
+    "@biomejs/cli-linux-arm64": "npm:1.9.2"
+    "@biomejs/cli-linux-arm64-musl": "npm:1.9.2"
+    "@biomejs/cli-linux-x64": "npm:1.9.2"
+    "@biomejs/cli-linux-x64-musl": "npm:1.9.2"
+    "@biomejs/cli-win32-arm64": "npm:1.9.2"
+    "@biomejs/cli-win32-x64": "npm:1.9.2"
+  dependenciesMeta:
+    "@biomejs/cli-darwin-arm64":
+      optional: true
+    "@biomejs/cli-darwin-x64":
+      optional: true
+    "@biomejs/cli-linux-arm64":
+      optional: true
+    "@biomejs/cli-linux-arm64-musl":
+      optional: true
+    "@biomejs/cli-linux-x64":
+      optional: true
+    "@biomejs/cli-linux-x64-musl":
+      optional: true
+    "@biomejs/cli-win32-arm64":
+      optional: true
+    "@biomejs/cli-win32-x64":
+      optional: true
+  bin:
+    biome: bin/biome
+  checksum: 10c0/0addf6a387112ba950693ae0b782db93f307300de111a46902c745c25baab5aaf1a3558be830f373e4f034d45eaa011b6bccfdc1e18d26f733136c32dffd83f9
+  languageName: node
+  linkType: hard
+
+"@biomejs/cli-darwin-arm64@npm:1.9.2":
+  version: 1.9.2
+  resolution: "@biomejs/cli-darwin-arm64@npm:1.9.2"
+  conditions: os=darwin & cpu=arm64
+  languageName: node
+  linkType: hard
+
+"@biomejs/cli-darwin-x64@npm:1.9.2":
+  version: 1.9.2
+  resolution: "@biomejs/cli-darwin-x64@npm:1.9.2"
+  conditions: os=darwin & cpu=x64
+  languageName: node
+  linkType: hard
+
+"@biomejs/cli-linux-arm64-musl@npm:1.9.2":
+  version: 1.9.2
+  resolution: "@biomejs/cli-linux-arm64-musl@npm:1.9.2"
+  conditions: os=linux & cpu=arm64 & libc=musl
+  languageName: node
+  linkType: hard
+
+"@biomejs/cli-linux-arm64@npm:1.9.2":
+  version: 1.9.2
+  resolution: "@biomejs/cli-linux-arm64@npm:1.9.2"
+  conditions: os=linux & cpu=arm64 & libc=glibc
+  languageName: node
+  linkType: hard
+
+"@biomejs/cli-linux-x64-musl@npm:1.9.2":
+  version: 1.9.2
+  resolution: "@biomejs/cli-linux-x64-musl@npm:1.9.2"
+  conditions: os=linux & cpu=x64 & libc=musl
+  languageName: node
+  linkType: hard
+
+"@biomejs/cli-linux-x64@npm:1.9.2":
+  version: 1.9.2
+  resolution: "@biomejs/cli-linux-x64@npm:1.9.2"
+  conditions: os=linux & cpu=x64 & libc=glibc
+  languageName: node
+  linkType: hard
+
+"@biomejs/cli-win32-arm64@npm:1.9.2":
+  version: 1.9.2
+  resolution: "@biomejs/cli-win32-arm64@npm:1.9.2"
+  conditions: os=win32 & cpu=arm64
+  languageName: node
+  linkType: hard
+
+"@biomejs/cli-win32-x64@npm:1.9.2":
+  version: 1.9.2
+  resolution: "@biomejs/cli-win32-x64@npm:1.9.2"
+  conditions: os=win32 & cpu=x64
   languageName: node
   linkType: hard
 

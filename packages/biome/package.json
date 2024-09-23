@@ -1,0 +1,31 @@
+{
+  "name": "@adambullmer/biome-config",
+  "version": "0.0.0-development",
+  "description": "",
+  "repository": "https://github.com/adambullmer/shared-configs",
+  "homepage": "https://github.com/adambullmer/shared-configs/tree/main/packages/biome/#readme",
+  "license": "LGPL-3.0-only",
+  "packageManager": "yarn@4.5.0",
+  "type": "module",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com",
+    "access": "public",
+    "provenance": true
+  },
+  "files": [
+    "biome.jsonc"
+  ],
+  "exports": "./biome.jsonc",
+  "scripts": {
+    "test": "echo 'No tests'",
+    "release": "semantic-release"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.9.2",
+    "conventional-changelog-conventionalcommits": "^8.0.0",
+    "semantic-release-monorepo": "^8.0.2"
+  },
+  "peerDependencies": {
+    "@biomejs/biome": ">=1.9.2"
+  }
+}

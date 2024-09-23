@@ -1,0 +1,46 @@
+name: Lint
+
+on:
+  push:
+    branches:
+      - main
+      - next
+      - next-major
+      - alpha
+      - beta
+    tags-ignore:
+      - "**"
+
+permissions:
+  contents: read # for checkout
+
+jobs:
+  lint:
+    name: Lint Project
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 🛎 Checkout
+        uses: actions/checkout@v4
+
+      - name: 🗃️ Check Formatting
+        uses: dprint/check@v2.2
+
+      - name: 🏗 Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          registry-url: "https://npm.pkg.github.com"
+
+      - name: 🛠 Configure Package Manager
+        id: configure-package-manager
+        run: |
+          corepack enable
+          corepack install
+          yarn -v
+
+      - name: 👨‍💻 Install dependencies
+        run: yarn install --immutable
+
+      - name: 📦 Lint Project
+        run: yarn run check

@@ -133,5 +133,26 @@
         },
       },
     },
+    {
+      // cosmicconfig style configs
+      "include": [
+        // e.g. .prettierrc
+        ".*rc",
+        // e.g. .prettierrc.js
+        ".*rc.*",
+        // e.g. prettier.config.js
+        "*.config.*",
+      ],
+      "linter": {
+        "rules": {
+          "performance": {
+            "noBarrelFile": "off",
+          },
+          "style": {
+            "noDefaultExport": "off",
+          },
+        },
+      },
+    },
   ],
 }

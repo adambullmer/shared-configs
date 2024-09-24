@@ -42,7 +42,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@adambullmer/eslint-config@workspace:packages/eslint":
+"@adambullmer/eslint-config@workspace:*, @adambullmer/eslint-config@workspace:packages/eslint":
   version: 0.0.0-use.local
   resolution: "@adambullmer/eslint-config@workspace:packages/eslint"
   dependencies:
@@ -6359,6 +6359,7 @@ __metadata:
   dependencies:
     "@adambullmer/biome-config": "workspace:*"
     "@adambullmer/commitlint-config": "workspace:*"
+    "@adambullmer/eslint-config": "workspace:*"
     "@adambullmer/lint-staged-config": "workspace:*"
     "@adambullmer/prettier-config": "workspace:*"
     "@biomejs/biome": "npm:1.9.2"
@@ -6368,6 +6369,7 @@ __metadata:
     "@semantic-release/github": "npm:^10.3.4"
     "@semantic-release/release-notes-generator": "npm:^14.0.1"
     conventional-changelog-conventionalcommits: "npm:^8.0.0"
+    eslint: "npm:^9.11.1"
     husky: "npm:^9.1.6"
     lint-staged: "npm:^15.2.10"
     prettier: "npm:^3.3.3"

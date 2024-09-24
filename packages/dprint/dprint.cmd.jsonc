@@ -10,25 +10,25 @@
     "commands": [
       {
         "command": "gofmt",
-        "exts": ["go"]
+        "exts": ["go"],
       },
       {
         "command": "php-cs-fixer fix --rules=@PSR12 {{file_path}}",
-        "exts": ["php"]
+        "exts": ["php"],
       },
       {
         "command": "shfmt --apply-ignore -i 4 -bn",
-        "exts": ["sh"]
+        "exts": ["sh"],
       },
       {
         "command": "sqlfmt --print-width 60 --tab-width {{indent_width}} --align --casemode upper",
-        "exts": ["sql"]
-      }
-    ]
+        "exts": ["sql"],
+      },
+    ],
   },
 
   "plugins": [
     "https://plugins.dprint.dev/exec-0.5.0.json@8d9972eee71fa1590e04873540421f3eda7674d0f1aae3d7c788615e7b7413d0",
-    "https://plugins.dprint.dev/prettier-0.46.1.json@e5bd083088a8dfc6e5ce2d3c9bee81489b065bd5345ef55b59f5d96627928b7a"
-  ]
+    "https://plugins.dprint.dev/prettier-0.46.1.json@e5bd083088a8dfc6e5ce2d3c9bee81489b065bd5345ef55b59f5d96627928b7a",
+  ],
 }

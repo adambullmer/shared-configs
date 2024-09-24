@@ -1,6 +1,6 @@
 /**
  * @type {import('lint-staged').Config}
  */
-export default {
+export const config = {
   "*": ["dprint fmt --allow-no-files"],
 };

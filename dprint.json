@@ -1,1 +1,5 @@
-packages/dprint/dprint.json
+{
+  "extends": [
+    "packages/dprint/dprint.json",
+  ],
+}

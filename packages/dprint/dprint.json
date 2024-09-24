@@ -3,13 +3,16 @@
   "indentWidth": 2,
   "newLineKind": "lf",
   "useTabs": false,
-
   // Plugin Config
   // JS/TS
   "biome": {
     "associations": [
-      "!package.json", // yarn and biome's expectation of small arrays conflict causing lots of dirty changes often.
-      "!*.json", // probably just defer all JSON formatting to the JSON plugin
+      // yarn and biome's expectation of small arrays conflict causing lots of dirty changes often.
+      "!package.json",
+      // probably just defer all JSON formatting to the JSON plugin
+      "!*.json",
+      // Also defer jsonc files to json plugin
+      "!*.jsonc",
     ],
     // Agree with all default formatter settings
   },
@@ -17,11 +20,8 @@
     // No Override Needed
   },
   "json": {
-    "jsonTrailingCommaFiles": [
-      "**/*.jsonc",
-      "dprint.json",
-      ".vscode/*.json",
-    ],
+    "jsonTrailingCommaFiles": ["*.jsonc", "dprint.json", ".vscode/*.json"],
+    "trailingCommas": "jsonc",
   },
   // CSS, SCSS, Sass (indented syntax), and Less
   "malva": {

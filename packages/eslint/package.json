@@ -1,0 +1,42 @@
+{
+  "name": "@adambullmer/eslint-config",
+  "version": "0.0.0-development",
+  "description": "",
+  "repository": "https://github.com/adambullmer/shared-configs",
+  "homepage": "https://github.com/adambullmer/shared-configs/tree/main/packages/eslint/#readme",
+  "license": "LGPL-3.0-only",
+  "packageManager": "yarn@4.5.0",
+  "type": "module",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com",
+    "access": "public",
+    "provenance": true
+  },
+  "files": [
+    "eslint.config.mjs"
+  ],
+  "exports": "./eslint.config.mjs",
+  "scripts": {
+    "test": "echo 'No tests'",
+    "release": "semantic-release"
+  },
+  "dependencies": {
+    "@eslint/eslintrc": "^3.1.0",
+    "@eslint/js": "^9.10.0",
+    "@types/eslint__js": "^8.42.3",
+    "eslint-plugin-exception-handling": "^1.4.3",
+    "eslint-plugin-import": "^2.30.0",
+    "eslint-plugin-unicorn": "^55.0.0",
+    "typescript-eslint": "^8.6.0"
+  },
+  "devDependencies": {
+    "commitlint-plugin-semantic-commit-emoji": "^3.0.0",
+    "conventional-changelog-conventionalcommits": "^8.0.0",
+    "eslint": "^9.10.0",
+    "semantic-release-monorepo": "^8.0.2"
+  },
+  "peerDependencies": {
+    "eslint": ">=9",
+    "typescript": "*"
+  }
+}

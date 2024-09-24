@@ -2,7 +2,25 @@
   "extends": ["./dprint.json"],
 
   "prettier": {
-    // Agree with all default formatter settings
+    "overrides": [
+      {
+        "files": [
+          "**/.vscode/extensions.json",
+          "**/.vscode/launch.json",
+          "**/.vscode/settings.json",
+          "**/tsconfig*.json",
+          "**/jsconfig*.json",
+          "**/dprint.json",
+          "**/dprint.*.json",
+        ],
+        "options": {
+          "parser": "json5",
+          "quoteProps": "preserve",
+          "singleQuote": false,
+          "trailingComma": "all",
+        },
+      },
+    ],
   },
 
   // Non-native Configs

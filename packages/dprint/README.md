@@ -6,7 +6,7 @@
 
 Add the latest config json to your config.
 
-```json
+```jsonc
 // dprint.json
 {
   "extends": "https://github.com/adambullmer/shared-configs/releases/latest/dprint.json"

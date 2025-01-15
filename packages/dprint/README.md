@@ -9,7 +9,7 @@ Add the latest config json to your config.
 ```json
 // dprint.json
 {
-  "extends": "https://github.com/adambullmer/shared-configs/releases/latest/dprint.json"
+  "extends": "https://github.com/adambullmer/shared-configs/releases/latest/download/dprint.json"
   // [Optional] Other config options below
 }
 ```

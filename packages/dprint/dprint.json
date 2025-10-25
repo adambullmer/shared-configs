@@ -51,6 +51,16 @@
     "associations": ["Pipfile"],
   },
   // JS/TS
+  "imporg": {
+    "aliases": ["^@/", "^~/", "^#", "^virtual:"],
+    "groups": [
+      { "include": ["<builtin>"] },
+      { "include": ["<npm>"] },
+      { "include": ["<alias>"] },
+      { "include": ["<relative>"] },
+      { "include": ["<effect>"] },
+    ],
+  },
   "typescript": {
     "semiColons": "always",
     "quoteStyle": "preferDouble",
@@ -138,5 +148,6 @@
     "https://plugins.dprint.dev/g-plane/pretty_yaml-v0.5.1.wasm",
     "https://plugins.dprint.dev/g-plane/malva-v0.14.3.wasm",
     "https://plugins.dprint.dev/g-plane/markup_fmt-v0.24.0.wasm",
+    "https://plugins.dprint.dev/balthild/imporg-0.1.8.wasm",
   ],
 }

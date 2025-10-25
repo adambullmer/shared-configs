@@ -9,5 +9,5 @@ Then export this package from your preferred [prettier config file location](htt
 For simplicity, the below example assumes your config file is `.prettierrc.json`.
 
 ```sh
-echo '"@adambullmer/commitlint-config"' > .prettierrc.json
+echo '"@adambullmer/prettier-config"' > .prettierrc.json
 ```

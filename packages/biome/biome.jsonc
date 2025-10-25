@@ -1,15 +1,16 @@
 {
-  "$schema": "https://biomejs.dev/schemas/1.9.2/schema.json",
-  "vcs": { "enabled": true, "clientKind": "git", "useIgnoreFile": true, "defaultBranch": "main" },
-  "files": { "ignoreUnknown": false, "ignore": [] },
+  "$schema": "https://biomejs.dev/schemas/2.3.0/schema.json",
+  "vcs": {
+    "enabled": true,
+    "clientKind": "git",
+    "useIgnoreFile": true,
+    "defaultBranch": "main",
+  },
+
+  "files": { "ignoreUnknown": false, "includes": ["**"] },
+
   "formatter": {
-    "ignore": [
-      // yarn and biome's expectation of small arrays conflict causing lots of dirty changes often.
-      "**/package.json",
-      // probably just defer all JSON formatting to the JSON plugin
-      "**/*.jsonc",
-      "**/*.json",
-    ],
+    "includes": ["**", "!**/package.json", "!**/*.jsonc", "!**/*.json"],
     "enabled": true,
     "useEditorconfig": true,
     "formatWithErrors": false,
@@ -20,7 +21,15 @@
     "attributePosition": "auto",
     "bracketSpacing": true,
   },
-  "organizeImports": { "enabled": true },
+
+  "assist": {
+    "actions": {
+      "source": {
+        "organizeImports": "on",
+      },
+    },
+  },
+
   "javascript": {
     "formatter": {
       "jsxQuoteStyle": "double",
@@ -57,13 +66,13 @@
         "noUnusedImports": "error",
         "noUnusedPrivateClassMembers": "error",
         "noUnusedVariables": "error",
-        "useArrayLiterals": "error",
         "useImportExtensions": "error",
       },
       "performance": {
         "noBarrelFile": "error",
         "noReExportAll": "error",
         "useTopLevelRegex": "error",
+        "noNamespaceImport": "error",
       },
       "security": {
         // All active from recommended config
@@ -71,7 +80,6 @@
       "style": {
         "noDefaultExport": "error",
         "noNamespace": "error",
-        "noNamespaceImport": "error",
         "noNegationElse": "error",
         "noParameterProperties": "error",
         "noShoutyConstants": "error",
@@ -98,11 +106,20 @@
           "fix": "safe",
           "options": {
             "strictCase": true,
-            "enumMemberCase": "PascalCase",
+            "conventions": [
+              {
+                "selector": { "kind": "enumMember" },
+                "formats": ["PascalCase"],
+              },
+            ],
           },
         },
-        "useShorthandArrayType": "error",
         "useThrowOnlyError": "error",
+        "useArrayLiterals": "error",
+        "useConsistentArrayType": {
+          "level": "error",
+          "options": { "syntax": "shorthand" },
+        },
       },
       "suspicious": {
         "noConsole": {
@@ -120,9 +137,15 @@
       "nursery": {},
     },
   },
+
   "overrides": [
     {
-      "include": ["**/*.jsonc", "**/dprint.json", ".vscode/*.json", "**/.oxlintrc.json"],
+      "includes": [
+        "**/*.jsonc",
+        "**/dprint.json",
+        "**/.vscode/**/*.json",
+        "**/.oxlintrc.json",
+      ],
       "json": {
         "formatter": {
           "trailingCommas": "all",
@@ -135,14 +158,7 @@
     },
     {
       // cosmicconfig style configs
-      "include": [
-        // e.g. .prettierrc
-        ".*rc",
-        // e.g. .prettierrc.js
-        ".*rc.*",
-        // e.g. prettier.config.js
-        "*.config.*",
-      ],
+      "includes": ["**/.*rc/**", "**/.*rc.*", "**/*.config.*"],
       "linter": {
         "rules": {
           "performance": {

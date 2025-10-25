@@ -76,7 +76,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@adambullmer/oxlint-config@workspace:packages/oxlint":
+"@adambullmer/oxlint-config@workspace:*, @adambullmer/oxlint-config@workspace:packages/oxlint":
   version: 0.0.0-use.local
   resolution: "@adambullmer/oxlint-config@workspace:packages/oxlint"
   dependencies:
@@ -85,6 +85,9 @@ __metadata:
     oxlint-tsgolint: "npm:^0.3.0"
     prettier: "npm:^3.3.3"
     semantic-release-monorepo: "npm:^8.0.2"
+  peerDependencies:
+    oxlint: ">=1.24.0 <2"
+    oxlint-tsgolint: ">=0.3.0 <1"
   languageName: unknown
   linkType: soft
 
@@ -6541,6 +6544,7 @@ __metadata:
     "@adambullmer/commitlint-config": "workspace:*"
     "@adambullmer/eslint-config": "workspace:*"
     "@adambullmer/lint-staged-config": "workspace:*"
+    "@adambullmer/oxlint-config": "workspace:*"
     "@adambullmer/prettier-config": "workspace:*"
     "@biomejs/biome": "npm:1.9.2"
     "@commitlint/cli": "npm:^19.5.0"

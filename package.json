@@ -24,6 +24,7 @@
     "@adambullmer/commitlint-config": "workspace:*",
     "@adambullmer/eslint-config": "workspace:*",
     "@adambullmer/lint-staged-config": "workspace:*",
+    "@adambullmer/oxlint-config": "workspace:*",
     "@adambullmer/prettier-config": "workspace:*",
     "@biomejs/biome": "1.9.2",
     "@commitlint/cli": "^19.5.0",

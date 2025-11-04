@@ -24,9 +24,9 @@
     "@eslint/eslintrc": "^3.1.0",
     "@eslint/js": "^9.10.0",
     "@types/eslint__js": "^8.42.3",
-    "eslint-plugin-exception-handling": "^1.4.3",
-    "eslint-plugin-import": "^2.30.0",
-    "eslint-plugin-unicorn": "^55.0.0",
+    "eslint-plugin-exception-handling": "^1.5.6",
+    "eslint-plugin-import": "^2.32.0",
+    "eslint-plugin-unicorn": "^62.0.0",
     "typescript-eslint": "^8.6.0"
   },
   "devDependencies": {

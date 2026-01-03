@@ -1,1 +1,1 @@
-export { config as default } from "@adambullmer/lint-staged-config";
+export { default } from "@adambullmer/lint-staged-config";

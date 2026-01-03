@@ -2,21 +2,30 @@
   "name": "@adambullmer/lint-staged-config",
   "version": "0.0.0-development",
   "description": "",
-  "repository": "https://github.com/adambullmer/shared-configs",
   "homepage": "https://github.com/adambullmer/shared-configs/tree/main/packages/lint-staged-config/#readme",
   "license": "LGPL-3.0-only",
-  "packageManager": "yarn@4.5.0",
-  "type": "module",
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com",
-    "access": "public",
-    "provenance": true
-  },
+  "repository": "https://github.com/adambullmer/shared-configs",
   "files": [
-    "lint-staged.config.mjs"
+    "dist"
   ],
-  "exports": "./lint-staged.config.mjs",
+  "type": "module",
+  "imports": {
+    "#*": [
+      "./src/*/index.js"
+    ]
+  },
+  "exports": {
+    ".": "./dist/lint-staged.config.js"
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true,
+    "registry": "https://npm.pkg.github.com"
+  },
   "scripts": {
+    "prepublishOnly": "yarn lint:ci && yarn build",
+    "build": "yarn run vite build",
+    "prepack": "yarn run build",
     "test": "echo 'No tests'",
     "release": "semantic-release"
   },
@@ -26,9 +35,13 @@
   "devDependencies": {
     "commitlint-plugin-semantic-commit-emoji": "^3.0.0",
     "conventional-changelog-conventionalcommits": "^8.0.0",
-    "semantic-release-monorepo": "^8.0.2"
+    "lint-staged": "^16.2.7",
+    "semantic-release-monorepo": "^8.0.2",
+    "vite": "^7.3.0",
+    "vite-plugin-dts": "^4.5.4"
   },
   "peerDependencies": {
     "lint-staged": "*"
-  }
+  },
+  "packageManager": "yarn@4.5.0"
 }

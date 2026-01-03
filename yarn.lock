@@ -76,6 +76,17 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@adambullmer/oxfmt-config@workspace:packages/oxfmt":
+  version: 0.0.0-use.local
+  resolution: "@adambullmer/oxfmt-config@workspace:packages/oxfmt"
+  dependencies:
+    conventional-changelog-conventionalcommits: "npm:^8.0.0"
+    semantic-release-monorepo: "npm:^8.0.2"
+  peerDependencies:
+    oxfmt: "*"
+  languageName: unknown
+  linkType: soft
+
 "@adambullmer/oxlint-config@workspace:*, @adambullmer/oxlint-config@workspace:packages/oxlint":
   version: 0.0.0-use.local
   resolution: "@adambullmer/oxlint-config@workspace:packages/oxlint"

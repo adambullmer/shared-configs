@@ -1,8 +1,7 @@
+// Default/Production version of rules. Other modes can start with this as a base, and should only loosen requirements
 {
   "$schema": "../../node_modules/oxlint/configuration_schema.json",
-  "plugins": [
-    "typescript"
-  ],
+  "plugins": ["typescript"],
   "categories": {
     "correctness": "off"
     // "correctness": "error",
@@ -114,12 +113,7 @@
   },
   "overrides": [
     {
-      "files": [
-        "**/*.ts",
-        "**/*.tsx",
-        "**/*.mts",
-        "**/*.cts"
-      ],
+      "files": ["**/*.ts", "**/*.tsx", "**/*.mts", "**/*.cts"],
       "rules": {
         "no-const-assign": "off",
         "no-dupe-class-members": "off",
@@ -138,12 +132,7 @@
       }
     },
     {
-      "files": [
-        "**/*.ts",
-        "**/*.tsx",
-        "**/*.mts",
-        "**/*.cts"
-      ],
+      "files": ["**/*.ts", "**/*.tsx", "**/*.mts", "**/*.cts"],
       "rules": {
         "no-const-assign": "off",
         "no-dupe-class-members": "off",
@@ -162,9 +151,7 @@
       }
     },
     {
-      "files": [
-        "**/*.{js,mjs,cjs,jsx,ts,cts,tsx}"
-      ],
+      "files": ["**/*.{js,mjs,cjs,jsx,ts,cts,tsx}"],
       "rules": {
         "no-unused-vars": [
           "error",

@@ -2,20 +2,23 @@
   "name": "@adambullmer/oxlint-config",
   "version": "0.0.0-development",
   "description": "Shared config for oxlint",
-  "repository": "https://github.com/adambullmer/shared-configs",
   "homepage": "https://github.com/adambullmer/shared-configs/tree/main/packages/oxlint/#readme",
   "license": "LGPL-3.0-only",
-  "packageManager": "yarn@4.5.0",
-  "type": "module",
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com",
-    "access": "public",
-    "provenance": true
-  },
+  "repository": "https://github.com/adambullmer/shared-configs",
   "files": [
+    ".oxlintrc.*.json",
     ".oxlintrc.json"
   ],
-  "exports": "./.oxlintrc.json",
+  "type": "module",
+  "exports": {
+    ".": "./.oxlintrc.json",
+    "./*": "./.oxlintrc.*.json"
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true,
+    "registry": "https://npm.pkg.github.com"
+  },
   "scripts": {
     "test": "echo 'No tests'",
     "release": "semantic-release"
@@ -30,5 +33,6 @@
   "peerDependencies": {
     "oxlint": ">=1.24.0 <2",
     "oxlint-tsgolint": ">=0.3.0 <1"
-  }
+  },
+  "packageManager": "yarn@4.5.0"
 }

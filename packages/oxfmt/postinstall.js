@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+/* global console:readonly, process:writable */
 import { execSync } from "node:child_process";
 import { existsSync, readFileSync, writeFileSync } from "node:fs";
 import { createRequire } from "node:module";
@@ -113,7 +114,9 @@ function formatConfig(config) {
 
   const configEntries = Object.entries(config).filter(([key]) => key !== "$schema");
 
+  let index = 0;
   for (const [key, value] of configEntries) {
+    index++;
     const isLast = index === configEntries.length - 1;
     const jsonValue = JSON.stringify(value, undefined, 2);
     const indentedValue = jsonValue

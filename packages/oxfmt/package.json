@@ -18,9 +18,9 @@
     ".": "./.oxfmtrc.jsonc"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com",
     "access": "public",
-    "provenance": true
+    "provenance": true,
+    "registry": "https://npm.pkg.github.com"
   },
   "scripts": {
     "postinstall": "node postinstall.js",

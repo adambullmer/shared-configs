@@ -4,15 +4,18 @@ import pluginJs from "@eslint/js";
 import { plugin as ex } from "eslint-plugin-exception-handling";
 import importPlugin from "eslint-plugin-import";
 import unicornPlugin from "eslint-plugin-unicorn";
+import { defineConfig } from "eslint/config";
 import pluginTs from "typescript-eslint";
 
-export const config = pluginTs.config(
+export const config = defineConfig(
   {
     name: "@adambullmer/input-files",
-    files: ["**/*.{js,mjs,cjs,ts}"],
     ignores: ["**/node_modules/*", "**/.yarn/*", "**/dist/*", "**/artifacts/*"],
   },
   { name: "@adambullmer/plugin-exception-handling", plugins: { ex }, rules: { "ex/no-unhandled": "error" } },
+  // importPlugin.flatConfigs.recommended,
+  // importPlugin.flatConfigs.typescript,
+  // unicornPlugin.configs.recommended,
   { name: "@adambullmer/plugin-imports", plugins: { import: importPlugin }, rules: {} },
   { name: "@adambullmer/plugin-unicorn", plugins: { unicorn: unicornPlugin }, rules: {} },
   // {
@@ -26,11 +29,7 @@ export const config = pluginTs.config(
 
   {
     name: "@adambullmer/universal-config",
-    files: ["**/*.{{m,c}?j,c?t}sx?"],
-    languageOptions: {
-      ecmaVersion: 2020,
-      sourceType: "module",
-    },
+    files: ["**/*.{{m,c}?j,t}sx?"],
     rules: {
       "no-console": env.NODE_ENV === "production" ? "error" : "off",
       "no-debugger": env.NODE_ENV === "production" ? "error" : "off",
@@ -52,7 +51,7 @@ export const config = pluginTs.config(
 
   {
     name: "@adambullmer/test-files",
-    files: ["**/*.spec.{j,t}s", "**/__mocks__/**/*.{j,t}s"],
+    files: ["**/*.{spec,test}.{{m,c}?j,t}sx?", "**/__mocks__/**/*.{{m,c}?j,t}sx?"],
     rules: {},
   },
 );

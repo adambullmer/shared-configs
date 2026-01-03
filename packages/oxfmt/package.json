@@ -1,0 +1,39 @@
+{
+  "name": "@adambullmer/oxfmt-config",
+  "version": "0.0.0-development",
+  "description": "Portable configuration for oxfmt",
+  "homepage": "https://github.com/adambullmer/shared-configs/tree/main/packages/oxfmt/#readme",
+  "license": "LGPL-3.0-only",
+  "author": "Adam Bullmer <adam.bullmer@gmail.com>",
+  "repository": "https://github.com/adambullmer/shared-configs",
+  "directories": {},
+  "files": [
+    ".oxfmtrc.jsonc",
+    "postinstall.js"
+  ],
+  "type": "module",
+  "main": ".oxfmtrc.jsonc",
+  "module": ".oxfmtrc.jsonc",
+  "exports": {
+    ".": "./.oxfmtrc.jsonc"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com",
+    "access": "public",
+    "provenance": true
+  },
+  "scripts": {
+    "postinstall": "node postinstall.js",
+    "build": "echo 'No build necessary'",
+    "test:unit:ci": "echo 'No tests defined'",
+    "test:e2e:ci": "echo 'No tests defined'",
+    "release": "semantic-release"
+  },
+  "devDependencies": {
+    "conventional-changelog-conventionalcommits": "^8.0.0",
+    "semantic-release-monorepo": "^8.0.2"
+  },
+  "peerDependencies": {
+    "oxfmt": "*"
+  }
+}
